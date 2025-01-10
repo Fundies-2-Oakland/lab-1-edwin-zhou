@@ -9,31 +9,29 @@ public class Vector3D {
         this.z = z;
     }
 
-    public void getX() {
-        System.out.println(x);
+    public double getX() {
+        return x;
     }
 
-    public void getY() {
-        System.out.println(y);
+    public double getY() {
+        return y;
     }
 
-    public void getZ() {
-        System.out.println(z);
+    public double getZ() {
+        return z;
     }
 
     public String toString() {
         String myStr = "(%.2f, %.2f, %.2f)";
-        String result = String.format(myStr, x, y, z);
-        System.out.println(result);
-        return result;
+        return String.format(myStr, x, y, z);
     }
-    
+
     public static void main(String[] args) {
         var x = new Vector3D(12.9817, 17.139084, 6.190827);
 
-        x.getX();
-        x.getY();
-        x.getZ();
-        x.toString();
+        System.out.println("this is the x component: " + x.getX());
+        System.out.println("this is the y component: " + x.getY());
+        System.out.println("this is the z component: " + x.getZ());
+        System.out.println("this is the 3D vector rounded to two decimal places: " + x);
     }
 }
